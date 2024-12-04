@@ -34,55 +34,31 @@
                 />
 
             <EditText
-                android:id="@+id/editPrimeiroNome"
+                android:id="@+id/editGasolina"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="16dp"
                 android:ems="10"
-                android:hint="@string/txt_hint_edit_primeiro_nome"
+                android:hint="@string/txt_hint_edit_gasolina"
                 android:importantForAutofill="no"
                 android:inputType="text" />
 
             <EditText
-                android:id="@+id/editSobrenome"
+                android:id="@+id/editEtanol"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
                 android:layout_marginStart="16dp"
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="16dp"
                 android:ems="10"
-                android:hint="@string/txt_hint_edit_sobrenome"
-                android:importantForAutofill="no"
-                android:inputType="text" />
-
-            <EditText
-                android:id="@+id/editCursoDesejado"
-                android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="16dp"
-                android:ems="10"
-                android:hint="@string/txt_hint_edit_curso_desejado"
-                android:importantForAutofill="no"
-                android:inputType="text" />
-
-            <EditText
-                android:id="@+id/editTelefoneContato"
-                android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="16dp"
-                android:ems="10"
-                android:hint="@string/txt_hint_edit_telefone_contato"
+                android:hint="@string/txt_hint_edit_etanol"
                 android:importantForAutofill="no"
                 android:inputType="text" />
 
             <TextView
-                android:id="@+id/txtListaSpinner"
+                android:id="@+id/txtResultado"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
@@ -90,20 +66,10 @@
                 android:layout_marginEnd="16dp"
                 android:background="@color/vermelho"
                 android:gravity="center_horizontal"
-                android:text="@string/txt_selecione_o_curso"
+                android:text="@string/txt_resultado"
                 android:textSize="24sp"
                 android:textStyle="bold" />
 
-
-            <Spinner
-                android:id="@+id/spinner"
-                android:layout_width="409dp"
-                android:layout_height="48dp"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="8dp"
-                android:layout_marginEnd="16dp"
-
-                />
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -111,7 +77,7 @@
                 android:orientation="horizontal">
 
                 <Button
-                    android:id="@+id/btnLimpar"
+                    android:id="@+id/btnCalcular"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="16dp"
