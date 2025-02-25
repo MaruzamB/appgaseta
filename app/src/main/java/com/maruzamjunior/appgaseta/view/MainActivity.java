@@ -64,10 +64,10 @@ public class MainActivity extends AppCompatActivity {
 
         editPrimeiroNome = findViewById(R.id.editGasolina);
         editSobrenome = findViewById(R.id.editEtanol);
-        editCursoDesejado = findViewById(R.id.editCursoDesejado);
-        editTelefoneContato = findViewById(R.id.editTelefoneContato);
+       // editCursoDesejado = findViewById(R.id.editCursoDesejado);
+        //editTelefoneContato = findViewById(R.id.editTelefoneContato);
 
-        spinner = findViewById(R.id.spinner);
+        //spinner = findViewById(R.id.spinner);
 
         editPrimeiroNome.setText(pessoa.getPrimeiroNome());
         editSobrenome.setText(pessoa.getSobreNome());
