@@ -1,11 +1,13 @@
 package com.maruzamjunior.appgaseta.controller;
 
+import android.content.ContentValues;
 import android.content.SharedPreferences;
 
+import com.maruzamjunior.appgaseta.database.GasetaDB;
 import com.maruzamjunior.appgaseta.model.Combustivel;
 import com.maruzamjunior.appgaseta.view.GasEtaActivity;
 
-public class CombustivelController {
+public class CombustivelController  extends GasetaDB {
 
     SharedPreferences preferences;
 
@@ -14,12 +16,18 @@ public class CombustivelController {
     public static final String  NOME_PREFERENCES = "pref_gaseta";
 
     public CombustivelController(GasEtaActivity activity){
+        super(activity);
         preferences = activity.getSharedPreferences(NOME_PREFERENCES, 0);
         dadosPreferences  = preferences.edit();
 
     }
 
+
+
     public void salvar(Combustivel combustivel){
+
+        ContentValues dados = new ContentValues();
+
         dadosPreferences.putString
                 ("combustivel", combustivel.getNomeCombustivel());
         dadosPreferences.putFloat
@@ -27,6 +35,13 @@ public class CombustivelController {
         dadosPreferences.putString
                 ("recomendacao", combustivel.getRecomendacao());
         dadosPreferences.apply();
+
+        dados.put("nomeCombustivel", combustivel.getNomeCombustivel());
+        dados.put("precoCombustivel", combustivel.getPrecoCombustivel());
+        dados.put("recomendacao", combustivel.getRecomendacao());
+
+
+        salvarObjeto("Combustivel", dados);
     }
     public void limpar(){
         dadosPreferences.clear();
