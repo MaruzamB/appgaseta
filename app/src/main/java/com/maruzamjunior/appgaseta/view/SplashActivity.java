@@ -11,10 +11,11 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 import com.maruzamjunior.appgaseta.R;
+import com.maruzamjunior.appgaseta.database.GasetaDB;
 
 public class SplashActivity extends AppCompatActivity {
 
-    public static final int Time_OUT_SPLASH = 3000;
+    public static final int Time_OUT_SPLASH = 6000;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -34,6 +35,9 @@ public class SplashActivity extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
+
+                GasetaDB db = new GasetaDB(SplashActivity.this);
+
                 Intent telaPrincipal = new Intent(SplashActivity.this, GasEtaActivity.class);
                 startActivity(telaPrincipal);
                 finish();

@@ -13,6 +13,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.maruzamjunior.appgaseta.R;
 import com.maruzamjunior.appgaseta.controller.CombustivelController;
+import com.maruzamjunior.appgaseta.database.GasetaDB;
 import com.maruzamjunior.appgaseta.model.Combustivel;
 import com.maruzamjunior.appgaseta.util.UtilGasEta;
 
@@ -42,6 +43,8 @@ public class GasEtaActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_gaseta);
+
+
 
         controller = new CombustivelController(GasEtaActivity.this);
 
