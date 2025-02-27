@@ -17,6 +17,8 @@ import com.maruzamjunior.appgaseta.database.GasetaDB;
 import com.maruzamjunior.appgaseta.model.Combustivel;
 import com.maruzamjunior.appgaseta.util.UtilGasEta;
 
+import java.util.List;
+
 public class GasEtaActivity extends AppCompatActivity {
 
     CombustivelController controller;
@@ -39,14 +41,16 @@ public class GasEtaActivity extends AppCompatActivity {
     double precoEtanol;
     String recomendacao;
 
+    List<Combustivel> dados;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_gaseta);
 
-
-
         controller = new CombustivelController(GasEtaActivity.this);
+
+        dados = controller.getListaDeDados();
 
         editEtanol = findViewById(R.id.editEtanol);
         editGasolina = findViewById(R.id.editGasolina);
@@ -133,7 +137,7 @@ public class GasEtaActivity extends AppCompatActivity {
                 controller.salvar(combustivelEtanol);
                 controller.salvar(combustivelGasolina);
 
-                int parada = 0;
+
 
 
 

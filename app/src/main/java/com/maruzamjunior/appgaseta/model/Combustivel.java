@@ -2,9 +2,18 @@ package com.maruzamjunior.appgaseta.model;
 
 public class Combustivel {
 
+    private Integer id;
     private String nomeCombustivel;
     private double precoCombustivel;
     private  String recomendacao;
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
 
     public String getNomeCombustivel() {
         return nomeCombustivel;

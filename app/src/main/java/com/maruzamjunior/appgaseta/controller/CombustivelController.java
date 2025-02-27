@@ -7,6 +7,8 @@ import com.maruzamjunior.appgaseta.database.GasetaDB;
 import com.maruzamjunior.appgaseta.model.Combustivel;
 import com.maruzamjunior.appgaseta.view.GasEtaActivity;
 
+import java.util.List;
+
 public class CombustivelController  extends GasetaDB {
 
     SharedPreferences preferences;
@@ -42,6 +44,10 @@ public class CombustivelController  extends GasetaDB {
 
 
         salvarObjeto("Combustivel", dados);
+    }
+
+    public List<Combustivel> getListaDeDados(){
+        return listarDados();
     }
     public void limpar(){
         dadosPreferences.clear();
