@@ -52,6 +52,14 @@ public class GasEtaActivity extends AppCompatActivity {
 
         dados = controller.getListaDeDados();
 
+        Combustivel objAlteracao = dados.get(1);
+        objAlteracao.setNomeCombustivel("GASOLINA**ADULTERADA");
+        objAlteracao.setPrecoCombustivel(1.99);
+        objAlteracao.setRecomendacao("**NÃO**COMPRE**");
+
+        controller.alterar(objAlteracao);
+
+
         editEtanol = findViewById(R.id.editEtanol);
         editGasolina = findViewById(R.id.editGasolina);
 
@@ -116,9 +124,6 @@ public class GasEtaActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-
-
-
                 combustivelGasolina = new Combustivel();
                 combustivelEtanol = new Combustivel();
 
@@ -136,8 +141,6 @@ public class GasEtaActivity extends AppCompatActivity {
 
                 controller.salvar(combustivelEtanol);
                 controller.salvar(combustivelGasolina);
-
-
 
 
 

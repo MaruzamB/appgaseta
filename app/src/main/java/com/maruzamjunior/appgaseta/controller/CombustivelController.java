@@ -24,8 +24,6 @@ public class CombustivelController  extends GasetaDB {
 
     }
 
-
-
     public void salvar(Combustivel combustivel){
 
         ContentValues dados = new ContentValues();
@@ -46,9 +44,24 @@ public class CombustivelController  extends GasetaDB {
         salvarObjeto("Combustivel", dados);
     }
 
+
     public List<Combustivel> getListaDeDados(){
         return listarDados();
     }
+
+    public void alterar(Combustivel combustivel){
+
+        ContentValues dados = new ContentValues();
+
+        dados.put("id", combustivel.getId());
+        dados.put("nomeCombustivel", combustivel.getNomeCombustivel());
+        dados.put("precoCombustivel", combustivel.getPrecoCombustivel());
+        dados.put("recomendacao", combustivel.getRecomendacao());
+
+        alterarObjeto("Combustivel", dados);
+
+    }
+
     public void limpar(){
         dadosPreferences.clear();
         dadosPreferences.apply();

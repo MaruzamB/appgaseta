@@ -77,14 +77,16 @@ public class GasetaDB extends SQLiteOpenHelper {
             }
             while (cursor.moveToNext());
 
-
         }
-        else{
-
-        }
-
+        else{}
 
         return lista;
+    }
+
+    public void alterarObjeto(String tabela, ContentValues dados ){
+        int id = dados.getAsInteger("id");
+        db.update(tabela, dados, "id=?",
+                new String[]{Integer.toString(id)});
     }
 
 }
