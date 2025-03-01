@@ -5,7 +5,7 @@ public class Combustivel {
     private Integer id;
     private String nomeCombustivel;
     private double precoCombustivel;
-    private  String recomendacao;
+    private String recomendacao;
 
     public Integer getId() {
         return id;

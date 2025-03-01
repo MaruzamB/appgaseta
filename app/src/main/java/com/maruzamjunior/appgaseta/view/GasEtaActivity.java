@@ -26,7 +26,6 @@ public class GasEtaActivity extends AppCompatActivity {
     Combustivel combustivelEtanol;
     Combustivel combustivelGasolina;
 
-
     EditText editGasolina;
     EditText editEtanol;
 
@@ -57,7 +56,7 @@ public class GasEtaActivity extends AppCompatActivity {
         objAlteracao.setPrecoCombustivel(1.99);
         objAlteracao.setRecomendacao("**NÃO**COMPRE**");
 
-        //controller.alterar(objAlteracao);
+        controller.alterar(objAlteracao);
         controller.deletar(15);
 
         editEtanol = findViewById(R.id.editEtanol);
@@ -75,27 +74,26 @@ public class GasEtaActivity extends AppCompatActivity {
 
                 boolean isDadosOk = true;
 
-                if (TextUtils.isEmpty(editEtanol.getText())){
+                if (TextUtils.isEmpty(editEtanol.getText())) {
                     editEtanol.setError("*OBRIGATÓRIO*");
                     editEtanol.requestFocus();
                     isDadosOk = false;
                 }
 
-                if (TextUtils.isEmpty(editGasolina.getText())){
+                if (TextUtils.isEmpty(editGasolina.getText())) {
                     editGasolina.setError("*OBRIGATÓRIO*");
                     editGasolina.requestFocus();
                     isDadosOk = false;
                 }
 
-                if(isDadosOk){
+                if (isDadosOk) {
                     precoEtanol = Double.parseDouble(editEtanol.getText().toString());
                     precoGasolina = Double.parseDouble(editGasolina.getText().toString());
                     recomendacao = UtilGasEta.calcularMelhorOpcao(precoGasolina, precoEtanol);
                     txtResultado.setText(recomendacao);
 
                     btnSalvar.setEnabled(true);
-                }
-                else {
+                } else {
                     Toast.makeText(GasEtaActivity.this,
                             "Atenção verifique os dados digitados",
                             Toast.LENGTH_LONG).show();
@@ -141,8 +139,6 @@ public class GasEtaActivity extends AppCompatActivity {
 
                 controller.salvar(combustivelEtanol);
                 controller.salvar(combustivelGasolina);
-
-
 
             }
         });

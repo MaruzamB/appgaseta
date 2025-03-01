@@ -2,15 +2,14 @@ package com.maruzamjunior.appgaseta.util;
 
 public class UtilGasEta {
 
-    public static String calcularMelhorOpcao(double gasolina, double etanol){
+    public static String calcularMelhorOpcao(double gasolina, double etanol) {
 
         double precoIdeal = gasolina * 0.70;
         String mensagemDeRetorno;
 
-        if (etanol <= precoIdeal){
+        if (etanol <= precoIdeal) {
             mensagemDeRetorno = "Abastecer  Com Etanol";
-        }
-        else {
+        } else {
             mensagemDeRetorno = "Abastecer Com Gasolina";
         }
         return mensagemDeRetorno;

@@ -9,22 +9,22 @@ import com.maruzamjunior.appgaseta.view.GasEtaActivity;
 
 import java.util.List;
 
-public class CombustivelController  extends GasetaDB {
+public class CombustivelController extends GasetaDB {
 
     SharedPreferences preferences;
 
     SharedPreferences.Editor dadosPreferences;
 
-    public static final String  NOME_PREFERENCES = "pref_gaseta";
+    public static final String NOME_PREFERENCES = "pref_gaseta";
 
-    public CombustivelController(GasEtaActivity activity){
+    public CombustivelController(GasEtaActivity activity) {
         super(activity);
         preferences = activity.getSharedPreferences(NOME_PREFERENCES, 0);
-        dadosPreferences  = preferences.edit();
+        dadosPreferences = preferences.edit();
 
     }
 
-    public void salvar(Combustivel combustivel){
+    public void salvar(Combustivel combustivel) {
 
         ContentValues dados = new ContentValues();
 
@@ -45,11 +45,11 @@ public class CombustivelController  extends GasetaDB {
     }
 
 
-    public List<Combustivel> getListaDeDados(){
+    public List<Combustivel> getListaDeDados() {
         return listarDados();
     }
 
-    public void alterar(Combustivel combustivel){
+    public void alterar(Combustivel combustivel) {
 
         ContentValues dados = new ContentValues();
 
@@ -61,11 +61,12 @@ public class CombustivelController  extends GasetaDB {
         alterarObjeto("Combustivel", dados);
 
     }
-    public void deletar(int id){
+
+    public void deletar(int id) {
         deletarObjeto("Combustivel", id);
     }
 
-    public void limpar(){
+    public void limpar() {
         dadosPreferences.clear();
         dadosPreferences.apply();
     }
