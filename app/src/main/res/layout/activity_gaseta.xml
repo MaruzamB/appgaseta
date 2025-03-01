@@ -6,6 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@drawable/posto2"
     tools:context=".view.GasEtaActivity">
 
     <ScrollView
@@ -27,6 +28,7 @@
                 android:layout_marginEnd="16dp"
                 android:background="@color/azul"
                 android:gravity="center_horizontal"
+                android:textColor="@color/white"
                 android:text="@string/txt_titulo"
                 android:textSize="24sp"
                 android:textStyle="bold"
@@ -58,6 +60,7 @@
                     android:layout_marginEnd="30dp"
                     android:ems="10"
                     android:hint="@string/txt_hint_edit_gasolina"
+                    android:textColorHint="@color/white"
                     android:importantForAutofill="no"
                     android:inputType="numberDecimal" />
 
@@ -70,6 +73,7 @@
                     android:layout_marginEnd="16dp"
                     android:ems="10"
                     android:hint="@string/txt_hint_edit_etanol"
+                    android:textColorHint="@color/white"
                     android:importantForAutofill="no"
                     android:inputType="numberDecimal" />
 
@@ -95,6 +99,7 @@
                 android:background="@color/azul"
                 android:gravity="center_horizontal"
                 android:text="@string/txt_resultado"
+                android:textColor="@color/white"
                 android:textSize="24sp"
                 android:textStyle="bold" />
 
@@ -116,6 +121,7 @@
                 android:layout_marginTop="8dp"
                 android:layout_marginEnd="16dp"
                 android:enabled="false"
+                android:textColor="@color/white"
                 android:text="@string/txt_button_salvar" />
 
 
