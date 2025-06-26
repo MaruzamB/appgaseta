@@ -61,6 +61,7 @@
                     android:ems="10"
                     android:hint="@string/txt_hint_edit_gasolina"
                     android:textColorHint="@color/white"
+                    android:textColor="@color/white"
                     android:importantForAutofill="no"
                     android:inputType="numberDecimal" />
 
@@ -74,6 +75,7 @@
                     android:ems="10"
                     android:hint="@string/txt_hint_edit_etanol"
                     android:textColorHint="@color/white"
+                    android:textColor="@color/white"
                     android:importantForAutofill="no"
                     android:inputType="numberDecimal" />
 
